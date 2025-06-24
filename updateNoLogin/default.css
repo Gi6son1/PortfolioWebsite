@@ -1,0 +1,619 @@
+html, body {
+
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
+    
+}
+
+h1, h2, h3 {
+   text-align: center;
+   margin-bottom: 0%;
+   padding-bottom: 0%;
+   margin-top: 1%;
+   padding-top: 2%;
+}
+
+h1 {
+   font-size: 3vw;
+}
+
+h1.about-title{
+    padding-top: 0%;
+    padding-top: 0%;
+}
+
+h2 {
+   font-size: 2vw;
+}
+
+.text {
+   padding: 2%;
+   font-size: 1vw;
+   max-width: 100%; 
+   max-height: 100%;
+}
+
+#comment-area .text{
+    font-size: 100%;
+}
+
+.suggestion-box, .title-area, .social-login-holder {
+   font-family: Rockwell Extra Bold,Rockwell Bold,monospace; 
+   font-size: medium;
+   top: 0vw;
+   width: 25vw;
+   height: 360px;
+}
+
+.suggestion-box, .title-area, .social-login-holder, .login-box, .social-box {
+    margin: auto;
+    position: absolute;
+}
+
+.title-area {
+   width: 50vw; 
+   left: 25vw;
+   font-size: large;
+   background-color: #e0e0e0;
+}
+
+.social-login-holder, .suggestion-box {
+    background:
+    linear-gradient(135deg, #e0e0e0 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #e0e0e0 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: #9ae1fc;
+}
+
+.suggestion-box {
+   left: 0vw;
+}
+
+.social-login-holder{
+    left: 75vw;
+}
+.login-box, .social-box {
+   height: 190px;
+   width: 100%;
+}
+
+/*.login-box{
+    border: 1px solid green;
+}*/
+
+
+
+.social-box {
+   top: 180px; 
+}
+
+.social-logo {
+   position: relative;
+   top: 50%;
+   left: 0%;
+   width: 22.5%;
+   margin-inline: 0%;
+}
+
+#project1-box, #project2-box, #project3-box, #project4-box {
+   position: absolute;
+   font-family: Rockwell Extra Bold,Rockwell Bold,monospace; 
+   font-size: medium;
+   top: 360px;
+   width: 25vw;
+   height: 66vh;
+   text-align: left;
+   background: radial-gradient(circle at left top, #9ae1fc , #e0e0e0);
+}
+
+#project1-box {
+   left:0vw;
+}
+
+#project2-box {
+   left:25vw;
+}
+
+#project3-box {
+   left:50vw;
+}
+
+#project4-box {
+   left:75vw;
+}
+
+#project1-logo, #project2-logo, #project3-logo, #project4-logo {
+   position: relative;
+   transform: translate(0, 50%);
+   width: 50%;
+}
+
+#project1-logo {
+   left: 24.5%;
+}
+
+#project1-lid, #project2-lid , #project3-lid, #project4-lid{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   pointer-events: none;
+   -webkit-backdrop-filter: blur(12px);
+   backdrop-filter: blur(12px);
+}
+
+#project1-lid-text, #project2-lid-text, #project3-lid-text, #project4-lid-text{
+   position: relative;
+   margin-block: 50%;
+   font-size: 7.5vw;
+   transform: rotate(-90deg);
+   font-style: italic;
+   text-align: center;
+   color: #e0e0e0;
+   text-shadow: 1.25px 0 0 #000, 0 -1.25px 0 #000, 0 1.25px 0 #000, -1.25px 0 0 #000;
+}
+
+#project1-lid-text, #project2-lid-text,#project3-lid-text, #project4-lid-text {
+   transition: opacity 0.25s;
+}
+
+#project1-box:hover #project1-lid, 
+#project2-box:hover #project2-lid, 
+#project3-box:hover #project3-lid, 
+#project4-box:hover #project4-lid{
+   backdrop-filter: blur(0);
+}
+
+#project1-box:hover #project1-lid-text, 
+#project2-box:hover #project2-lid-text, 
+#project3-box:hover #project3-lid-text, 
+#project4-box:hover #project4-lid-text{
+   opacity: 0;
+}
+
+.login-form-container{
+    position: relative;
+    margin-left: 0%;
+    margin-right: 0px;
+    margin-top: 1%;
+    /*border: 1px solid blue;*/
+}
+
+.name-input-field{
+    margin-top: 1%;
+    width: 80%;
+    height: 10%;
+    font-size: 100%;
+}
+
+
+.login-title{
+    position: relative;
+    text-align: center;
+    font-size: 1.5vw;
+    /*border: 1px solid black;*/
+}
+
+input[type=text], input[type=password]{
+    padding-inline: 5px;
+    border: 2.5px solid rgb(156, 156, 156);
+    transition: border 0.2s;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border: 2.5px solid #555;
+    outline: none;
+}
+
+#comment-error-msg {
+    margin: 3px;
+    font-size: 0.75vw;
+}
+
+#invalid-comment-box{
+    border: black solid 1px;
+    font-size: medium;
+    margin-right: 11%;
+    background-color: #e0e0e0;
+    margin-bottom: 6px;
+    display: none; /*display: block;*/
+}
+
+#login-form-register, #login-form-submit, #register-form-register, #comment-submit{
+    width: 43.25%;
+    height: 30px;
+    font-size: 100%;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+#register-box-blur {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 937px;
+    backdrop-filter: blur(10px);
+    pointer-events:all;
+    display: none; /*display: block;*/
+}
+
+#register-box{
+    position: absolute;
+    padding-inline: 20px;
+    top: 470px;
+    left: 960px;
+    outline: 1px solid black;
+    font-family: Rockwell Extra Bold,Rockwell Bold,monospace; 
+    background-color: #e0e0e0;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 500px;
+    display: none; /*display: block;*/
+}
+
+.register-box-contents{
+    margin: 3%;
+}
+
+.register-form-field {
+    margin-bottom: 5%;
+    width: 95%;
+    height: 30px;
+    font-size: x-large;
+}
+
+#register-form-register{
+transform: translate(50%, 50%);
+    width: 50%;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + img {
+    cursor: pointer;
+  }
+
+[type=radio]:checked + img {
+    outline: 2px solid black;
+}
+
+.profile-img-pick{
+    margin: 1.5%;
+    width: 11.75%;
+}
+
+#close-window{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    margin: 0;
+    width: 5.75%;
+    height: 5%;
+    font-size: large;
+    cursor: pointer;
+}
+
+#comment-area{
+    display: block;
+    position: absolute;
+    background-color: white;
+    outline: 1px solid black;
+    width: 22.5vw;
+    height: 275px;
+    overflow: scroll;
+}
+
+#comment-input-field{
+    position: relative;
+    margin-top: 1%;
+    font-size: large;
+    width: 20.5vw;
+    height: 50%;
+    text-align: left;
+    resize: none;
+}
+
+.comment-container{
+    position: absolute;
+    left: 1vw;
+    width: 22.5vw;
+    top: 3.5vw;
+}
+
+#comment-submit{
+    position: absolute;
+    top: 70px;
+    width: 4.5vw;
+    height: 2.5vw;
+    transform: rotate(-90deg) translate(0, -20%);
+    font-size: 1vw;
+}
+
+#input-comment-number {
+    left: 12.5vw;
+    width: 8vw;
+}
+
+#comment-label{
+    position: relative;
+    /*border: 1px solid red;*/
+    text-align: left;
+    font-size: 0.75vw;
+}
+
+#comment-approval-area{
+    color: rgb(5, 133, 133);
+}
+
+#wow-man{
+	position: relative;
+	width: 100%;
+}
+
+@media only screen and (max-width: 640px){
+    .title-area, .social-login-holder, .social-box, .login-box, .suggestion-box, #project1-box, #project2-box, #project3-box, #project4-box{
+        position: relative;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        display: inline-block;
+    }
+
+    #comment-area .text{
+        font-size: 80%;
+    }
+
+    /*.title-area{
+        border: 1px solid black;
+    }
+    
+    .social-login-holder{        border: 1px solid red;}
+    .social-box{        border: 1px solid blue;}
+    .login-box{        border: 1px solid green;}
+    .suggestion-box{        border: 1px solid purple;}
+    #project1-box{        border: 1px solid brown;}
+    #project2-box{        border: 1px solid yellowgreen;} 
+    #project3-box{        border: 1px solid orange;} 
+    #project4-box{        border: 1px solid pink;}
+
+    */
+    h1{
+        font-size:32px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .text{
+        font-size: 2.825vw;
+    }
+
+    .social-login-holder{
+        height: fit-content;
+    }
+
+    #project1-box, #project2-box, #project3-box, #project4-box{
+        height:110vw;
+    }
+
+    .comment-container{
+        position: relative;
+        width: 100%
+    }
+
+    #comment-area{
+        width: 90%;
+        left: 2%;
+    }
+
+    #comment-input-field{
+        width: 80%;
+    }
+
+    #input-comment-number{
+        left: 55%;
+    }
+
+    .login-box{
+        width: 100vw;
+        height: 50%;
+    }
+
+    .login-form-container{
+        position: relative;
+        margin-left: 5%;
+        margin-right: 0px;
+        margin-top: 1%;
+    }
+
+    .login-title{
+        font-size: 120%;
+    }
+
+    #login-error-msg {
+        margin: 3px;
+        font-size: 100%;
+    }
+
+
+    #project1-lid-text, #project2-lid-text, #project3-lid-text, #project4-lid-text{
+        font-size: 500%;
+    }
+
+    #comment-label{
+        font-size: 12px;
+    }
+
+    #comment-submit{
+        width: 75px;
+        height: 40px;
+        font-size: 100%;
+        transform: rotate(-90deg);
+    }
+
+    .social-logo {
+        position: relative;
+        left: 4%;
+        width: 20%;
+        margin-inline: 1%;
+     }
+
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1200px){
+    
+    #comment-area .text{
+        font-size: 80%;
+    }
+
+    .title-area{
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        height: 33vw;
+    }
+
+    .social-login-holder, .suggestion-box{
+        position: absolute;
+        top: 33vw;
+        width: 50%;
+        height: 33vw;
+    }
+    
+    .social-login-holder{
+        left: 50%;
+    }
+
+    #project1-box, #project2-box, #project3-box, #project4-box{
+        width: 50%;
+        height: 90vw;
+    }
+
+    #project1-box, #project3-box{
+       left: 0%; 
+       top: 66vw;
+    }
+
+    #project2-box, #project4-box{
+        left: 50%;
+    }
+
+    #project1-box, #project2-box{
+        top: 66vw;
+     }
+ 
+     #project3-box, #project4-box{
+         top: 133vw;
+     }
+
+    h1{
+        font-size: 3vw;
+    }
+
+    h2{
+        font-size: 2vw;
+    }
+
+    .text{
+        font-size: 1.75vw;
+    }
+
+    .comment-container{
+        position: relative;
+        width: 100%;
+    }
+
+    #comment-area{
+        width: 90%;
+        height: 22.5vw;
+        top: 0vw;
+        left: 2%;
+        font-size: 2vw;
+    }
+
+    #comment-input-field{
+        height: 3vw;
+        width: 80%;
+        height: 8vw;
+        font-size: 1.75vw;
+    }
+
+    .name-input-field{
+        width: 80%;
+    }
+
+    #input-name{
+        font-size: 1.5vw;
+    }
+
+    #input-comment-number{
+        left: 33vw;
+        top: 21.5vw;
+    }
+
+    #comment-submit{
+        position: absolute;
+        width: 8vw;
+        height: 4vw;
+        left: 82.5%;
+        top: 6vw;
+        font-size: 1.75vw;
+    }
+    
+    #comment-label{
+        display: none;
+    }
+
+    .login-box{
+        top: 0vw;
+        width: 50vw;
+        left: 0vw;
+        height: 17vw;
+    }
+
+    .login-form-container{
+        position: relative;
+        margin-left: 0%;
+        margin-right: 0px;
+        /*border: #000 solid 1px;*/
+        height: 75%;
+    }
+
+    #login-error-msg {
+        margin: 3px;
+        font-size: 1.25vw;
+    }
+
+
+    #project1-lid-text, #project2-lid-text, #project3-lid-text, #project4-lid-text{
+        font-size: 500%;
+    }
+
+
+    .social-logo {
+        position: relative;
+        left: 3.5%;
+        width: 20%;
+        margin-inline: 1%;
+     }
+
+     .social-box{
+         top: 50%;
+     }
+
+}
+

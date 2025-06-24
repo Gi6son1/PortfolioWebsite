@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="default.css?version=1">
+        <script type="text/javascript" src="jsFunctions.js"></script>
+        <title>OGSP</title>
+    </head>
+    <body>
+        <div class="social-login-background"></div>
+        <div class="suggestion-box">
+            <h2>Recent Comments</h2>
+            <div class="comment-container">
+                <div id="comment-area"></div>
+                <form id="comment-input-form">
+                    <textarea id="input-comment" name="comment" class="comment-input-field" placeholder="Post a comment:" rows="4" cols="20"></textarea>
+                    <input type="button" value="Submit" onclick="alert('this will submit the comment')" id="comment-submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="login-box">
+            <h2 class="login-title">Log In Here:</h2>
+            <div class="login-form-container">
+                <form id="login-form">
+                    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Enter Username:">
+                    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Enter Password:">
+                    <div id="invalid-login-box"><div id="login-error-msg">Invalid username and/or password entered. Please try again.</div></div>
+                    <input type="button" value="Login" onclick="logIn()" id="login-form-submit">
+                    <input type="button" value="Register" onclick="openRegisterMenu()"  id="login-form-register">
+                </form>
+            </div>
+        </div>
+
+        <div class="title-area">
+            <h1>Owain Gibson Side Projects</h1>
+            <p class="text">This website will be the storage space for any games/projects that I have decided to create in my free time. It's still a work in progress so
+                pls no judgements, or do judge and suggest how to make it better lmao.
+                With each project, the challenge is to create the project using a programming language that I haven't previously 
+                learnt or used before. 
+                I have a few ideas for the languages I'll be using, with a couple possible others being Go,  JavaScript (I will be using JS to develop this site but there are many things that JS can do),
+                and C++.
+                <br><br>
+                Wish me luck,
+                <br>
+                Owain
+            </p>
+        </div>
+
+        <div class="social-box">
+            <h2>Follow Me On:</h2>
+            <a href= "https://www.linkedin.com/in/owain-gibson/" target="_self"><img class="social-logo" src="linkedinlogo.png" alt="LinkedIn"></a>
+            <a href= "https://www.instagram.com/owain_gibson_/" target="_self"><img class="social-logo" src="instagramlogo.png" alt="Instagram"></a>
+            <a href= "https://www.facebook.com/profile.php?id=100009229935898" target="_self"><img class="social-logo" src="facebooklogo.png" alt="Facebook"></a> 
+        </div>
+
+        <div id="project1-box">
+            <h2>C# Game</h2>
+            <p class="text">
+                I created this game using the game engine Unity. It is a cyberpunk-themed, 2D platformer shoot-em-up - 
+                includes survival and level (1 level) modes and trophy system.
+                <br><br>
+                The original game was created to run on Windows and includes an accounts system to store progress. It can be downloaded here:
+                <br><br>
+                <a href="CSHARP_Game.zip" download="TROJAN">Click here to download my C# game!</a>
+                <br><br>
+                The game has also been converted into a web game also for quick access. It can be opened below:
+                <br><br>
+                <a href= "CSHARP_Web_Game/index.html" target="_blank">Click here to play the web-converted game!</a>
+                <img id="project1-logo" src="SmallPlatform.png" alt="C# game logo">
+            </p>
+            <div id="project1-lid"><div id="project1-lid-text">C#</div></div>     
+        </div>
+
+        <div id="project2-box">
+            <h2>Project 2 in progress</h2>
+            <p class="text">
+                <br><br>
+                This box will contain the second project that I am currently completing.
+                <br><br>
+                As a hint, it's a simulator game using the Java libgdx engine.
+            </p>
+            <div id="project2-lid"><div id="project2-lid-text">Java</div></div>
+        </div>
+
+        <div id="project3-box">
+            <h2>Project 3 pending</h2>
+            <p class="text">
+                <br><br>
+                This box will contain the third project that I will have completed
+                <br><br>
+                This project will likely be coded using Python, which could use the Flask framework
+            </p>
+            <div id="project3-lid"><div id="project3-lid-text">Python</div></div>
+        </div>
+
+        <div id="project4-box">
+            <h2>Project 4 pending</h2>
+            <p class="text">
+                <br><br>
+                This box will contain the fourth project that I will have completed
+                <br><br>
+                This project will likely be coded using Kotlin, I'm thinking an app which will be created in the Android Studio IDE
+            </p>
+            <div id="project4-lid"><div id="project4-lid-text">Kotlin</div></div>
+        </div>
+        <div id="register-box-blur"></div>
+        <div id="register-box">
+            <input type="button" id="close-window" value="&#10006;" onclick="closeRegisterMenu()">
+            <div class="register-box-contents">
+                <h1>Register</h1>
+                <br><br>
+                <form id="register-form">
+                    <label for="new-username-field">Must be 5-16 characters long and alphanumeric.</label>
+                    <input type="text" name="new-username" maxlength="16" pattern="[a-zA-Z0-9]+" id="new-username-field" class="register-form-field" placeholder="Enter New Username">
+                    <label for="new-password-field">Must be 5-16 characters long and must contain at least 1 number, one capital letter, and one lowercase letter.</label>
+                    <input type="password" name="new-password" maxlength="16" pattern="[a-zA-Z0-9]+" id="new-password-field" class="register-form-field" placeholder="Enter New Password">
+                    <input type="password" name="new-password-reenter" maxlength="16" pattern="[a-zA-Z0-9]+" id="new-password-reenter-field" class="register-form-field" placeholder="Re-enter New Password">
+                    <label for="colour-picker">Choose a colour to represent your account:</label>
+                    <input type="color" name="choose-colour" id="colour-picker" value="#ff0000">
+                    <br><br>
+                    <label>Choose an avatar to represent your account:</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="avatar-picker" value="avatar1" checked>
+                        <img class="profile-img-pick" src="boredApe1.jpg" alt="Bored Ape 1">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar-picker" value="avatar2" >
+                        <img class="profile-img-pick" src="boredApe2.jpg" alt="Bored Ape 2">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar-picker" value="avatar3" >
+                        <img class="profile-img-pick" src="boredApe3.jpg" alt="Bored Ape 3">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar-picker" value="avatar4" >
+                        <img class="profile-img-pick" src="boredApe4.jpg" alt="Bored Ape 4">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar-picker" value="avatar5" >
+                        <img class="profile-img-pick" src="boredApe5.jpg" alt="Bored Ape 5">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar-picker" value="avatar6" >
+                        <img class="profile-img-pick" src="boredApe6.jpg" alt="Bored Ape 6">
+                    </label>
+                    <input type="submit" value="Register" id="register-form-register">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
